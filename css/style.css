@@ -1,0 +1,20 @@
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.main-carousel {
+    height: 50vh;
+}
+
+.main-carousel img {
+    display: block;
+    width: 100vw;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    margin: auto 0px;
+  }
+
+  .container {
+    
+  }
