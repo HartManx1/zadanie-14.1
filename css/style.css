@@ -1,43 +1,13 @@
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-}
+body { font-family: 'Montserrat', sans-serif; }
 
-.main-carousel {
-  height: 50vh;
-}
+.main-carousel { height: 50vh; }
 
-.main-carousel img {
-  display: block;
-  width: 100vw;
-  height: 50vh;
-  background-size: cover;
-  background-position: center;
-  margin: auto 0px;
-}
+.main-carousel img { display: block; width: 100vw; height: 50vh; background-size: cover; background-position: center; margin: auto 0px; }
 
-.progress-bar {
-  height: 20px;
-  width: 0;
-  background: #333;
-}
+.progress-bar { height: 20px; width: 0; background: #333; }
 
-.font-styles {
-  text-align: center;
-  margin-top: -32vh;
-  font-size: 30px;
-  color: papayawhip;
-}
+.font-styles { text-align: center; margin-top: -32vh; font-size: 30px; color: papayawhip; }
 
-.button {
-  font-size: 22px;
-  position: absolute;
-  right: 1%;
-  z-index: 1;
-  border: none;
-  margin-top: 6px;
-}
-/*# sourceMappingURL=style.css.map */
+.button { font-size: 22px; position: absolute; right: 1%; z-index: 1; border: none; margin-top: 6px; }
