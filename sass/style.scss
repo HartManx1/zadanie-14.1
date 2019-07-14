@@ -7,7 +7,7 @@ body { font-family: 'Montserrat', sans-serif;
     height: 50vh;
 }
 
-.main-carousel img {
+.carousel-cell {
     display: block;
     width: 100vw;
     height: 50vh;
@@ -24,9 +24,10 @@ body { font-family: 'Montserrat', sans-serif;
 
   .font-styles {
         text-align: center;
-        margin-top: -32vh;
+        margin-top: 20vh;
         font-size: 30px;
         color: papayawhip;
+        text-shadow: 2px 2px 2px black;
   } 
 
   .button {
@@ -36,5 +37,13 @@ body { font-family: 'Montserrat', sans-serif;
     z-index: 1;
     border: none;
     margin-top: 6px;
+  }
+
+  .description {
+    text-align: center;
+    margin-top: 18vh;
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
   }
 
