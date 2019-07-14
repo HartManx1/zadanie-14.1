@@ -49,4 +49,15 @@ body {
   color: white;
   text-shadow: 2px 2px 2px black;
 }
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+.map-text {
+  padding: 10px;
+  text-align: center;
+  margin: 0 auto;
+}
 /*# sourceMappingURL=style.css.map */
