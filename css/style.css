@@ -3,7 +3,8 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 .main-carousel {
@@ -51,13 +52,16 @@ body {
 }
 
 #map {
-  height: 400px;
+  height: 47vh;
   width: 100%;
 }
 
 .map-text {
-  padding: 10px;
   text-align: center;
   margin: 0 auto;
+}
+
+p {
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */

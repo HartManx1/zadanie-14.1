@@ -24,7 +24,7 @@
             lng: 5.868111
         },
         title: 'Picture 2',
-        description: 'Tree',
+        description: 'Water',
     },
     {
         image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg',
@@ -34,7 +34,7 @@
             lng: 4.760531
         },
         title: 'Picture 3',
-        description: 'Tree',
+        description: 'Sea',
     },
     {
         image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg',
@@ -44,7 +44,7 @@
             lng: 2.162
         },
         title: 'Picture 4',
-        description: 'Tree',
+        description: 'Tower',
     },
     {
         image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg',
@@ -54,89 +54,44 @@
             lng: 21.012436
         },
         title: 'Picture 5',
-        description: 'Tree',
+        description: 'Rain',
     }
     ];
 
-    (function(){
-        // Initialize ad add the map
-        var cords0;
-        var coords1;
-        var coords2;
-        var coords3;
-        var coords4;
-        
-        
+    window.initMap = function () {
+
+        var map = new google.maps.Map(
+            document.getElementById('map'), {
+                zoom: 5,
+                center: data[0].coords
+            })
+
+        var markers = [];
+
         for (var i = 0; i < data.length; i++) {
-            var coords0 = data[0].coords;
-            var coords1 = data[1].coords;
-            var coords2 = data[2].coords;
-            var coords3 = data[3].coords;
-            var coords4 = data[4].coords;
-        }
-        
-        
-        window.initMap = function () {
-        
-        
-            var infos = document.getElementById('infos')
-        
-            var map = new google.maps.Map(
-                document.getElementById('map'), { zoom: 4, center: coords1 });
-    
-        
-            var markerOne = new google.maps.Marker({
-                position: coords0,
+
+            markers[i] = new google.maps.Marker({
+                position: data[i].coords,
                 map: map
             });
-            markerOne.addListener('click', function () {
-                infos.innerHTML = 'You clicked markerOne';
+
+            markers[i].addListener('click', function () {
+                flkty.select(i);
+            })
+
+
+            flkty.on('change', function (i) {
+
+                map.panTo(data[i].coords);
+
+                map.setZoom(7);
             });
-        
-        
-            var markerTwo = new google.maps.Marker({
-                position: coords1,
-                map: map
-            });
-            markerTwo.addListener('click', function () {
-                infos.innerHTML = 'You clicked markerTwo';
-            });
-        
-            var markerThree = new google.maps.Marker({
-                position: coords2,
-                map: map
-            });
-        
-            markerThree.addListener('click', function () {
-                infos.innerHTML = 'You clicked markerThree';
-            });
-        
-            var markerFour = new google.maps.Marker({
-                position: coords3,
-                map: map
-            });
-        
-            markerFour.addListener('click', function () {
-                infos.innerHTML = 'You clicked markerFour';
-            });
-        
-            var markerFive = new google.maps.Marker({
-                position: coords4,
-                map: map
-            });
-        
-            markerFive.addListener('click', function () {
-                infos.innerHTML = 'You clicked markerFive';
-            });
-        
         };
-        
-        })();
+    };
 
     Mustache.parse(object);
 
     for (let i = 0; i < data.length; i++) {
-        //console.log(data);  opcjonalnie - pomocne
         copyHere += Mustache.render(object, data[i]);
     }
 

@@ -1,60 +1,66 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-body { font-family: 'Montserrat', sans-serif;
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 .main-carousel {
-    height: 50vh;
+  height: 50vh;
 }
 
 .carousel-cell {
-    display: block;
-    width: 100vw;
-    height: 50vh;
-    background-size: cover;
-    background-position: center;
-    margin: auto 0px;
-  }
+  display: block;
+  width: 100vw;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  margin: auto 0px;
+}
 
-  .progress-bar {
-    height: 20px;
-    width: 0;
-    background: #333;
-  }
+.progress-bar {
+  height: 20px;
+  width: 0;
+  background: #333;
+}
 
-  .font-styles {
-        text-align: center;
-        margin-top: 20vh;
-        font-size: 30px;
-        color: papayawhip;
-        text-shadow: 2px 2px 2px black;
-  } 
+.font-styles {
+  text-align: center;
+  margin-top: 20vh;
+  font-size: 30px;
+  color: papayawhip;
+  text-shadow: 2px 2px 2px black;
+}
 
-  .button {
-    font-size: 22px;
-    position: absolute;
-    right: 1%;
-    z-index: 1;
-    border: none;
-    margin-top: 6px;
-  }
+.button {
+  font-size: 22px;
+  position: absolute;
+  right: 1%;
+  z-index: 1;
+  border: none;
+  margin-top: 6px;
+}
 
-  .description {
-    text-align: center;
-    margin-top: 18vh;
-    font-size: 20px;
-    color: white;
-    text-shadow: 2px 2px 2px black;
-  }
+.description {
+  text-align: center;
+  margin-top: 18vh;
+  font-size: 20px;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
 
-  #map {
-    height: 400px; 
-    width: 100%;  
-   }
+#map {
+  height: 47vh;
+  width: 100%;
+}
 
-   .map-text {
-    padding: 10px;
-    text-align: center;
-    margin: 0 auto;
-   }
+.map-text {
+  text-align: center;
+  margin: 0 auto;
+}
 
+p {
+  margin: 0;
+}
