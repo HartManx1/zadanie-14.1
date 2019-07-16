@@ -2,7 +2,7 @@
 
 (function () {
 
-    var object = document.getElementById('pictures').innerHTML;
+    var pictures = document.getElementById('pictures').innerHTML;
     var carousel = document.querySelector('.main-carousel');
     var copyHere = '';
 
@@ -68,7 +68,7 @@
 
         var markers = [];
 
-        for (var i = 0; i < data.length; i++) {
+        for (let i = 0; i < data.length; i++) {
 
             markers[i] = new google.maps.Marker({
                 position: data[i].coords,
@@ -89,10 +89,10 @@
         };
     };
 
-    Mustache.parse(object);
+    Mustache.parse(pictures);
 
     for (let i = 0; i < data.length; i++) {
-        copyHere += Mustache.render(object, data[i]);
+        copyHere += Mustache.render(pictures, data[i]);
     }
 
     carousel.insertAdjacentHTML('beforeend', copyHere);
@@ -122,8 +122,6 @@ flkty.on('scroll', function (progress) {
     progressBar.style.width = progress * 100 + '%';
 });
 
-
-var flkty = new Flickity('.main-carousel');
 
 var buttonGroup = document.querySelector('.button-group');
 var buttons = buttonGroup.querySelectorAll('.button');
